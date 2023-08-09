@@ -1,0 +1,13 @@
+.InputFieldMessage,
+.InputField{
+  border-radius: 0.5em;
+  width: 90%;
+  height: 3em;
+  border-color: #000000;
+  transition: 0.3s;
+  margin-top: 2em;
+}
+.InputFieldMessage{
+  resize: none;
+  height: 9em;
+}

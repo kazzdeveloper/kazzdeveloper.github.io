@@ -1,0 +1,223 @@
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.Introduction {
+    text-align: center;
+    font-size: min(20vw, 5em);
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100svh;
+}
+
+.Introduction>div {
+    margin: auto;
+}
+
+.ColoredWords {
+    color: #192BC2;
+}
+
+.Information {
+    padding-top: 0.8em;
+    color: black;
+    font-size: 0.3em;
+}
+
+.Arrow {
+    margin-top: 5em;
+    width: 4.7em;
+    animation: UpAndDownArrow 2s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+}
+
+#Games {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20em;
+}
+.GameContainer {
+    --shake-degrees: 2deg;
+    animation: Shake 3s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+    transform: rotateZ(var(--shake-degrees));
+    width: 20em;
+    box-shadow: 0px 0px 12px 6px #00000027;
+    transition: scale 0.3s;
+    border-radius: 20%;
+}
+.GameLink{
+    margin-top: 3em;
+}
+.GameLink:not(:first-child){
+    margin-left: 15em;
+}
+.GameIcon {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: opacity 0.3s;
+    border-radius: 20%;
+}
+
+.HoverImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.3s;
+    border-radius: 20%;
+}
+
+.GameContainer:hover .GameIcon {
+    opacity: 0;
+}
+
+.GameContainer:hover .HoverImage {
+    opacity: 1;
+}
+.SocialImage{
+    width: 2.5em;
+    height: 2.5em;
+    object-fit: contain;
+    transition: 0.3s;
+}
+.SocialLink:not(:first-child){
+   margin-left: 3em;
+}
+.SocialLink{
+    width: 3.5em;
+    height: 3.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5em;
+    transition: 0.3s;
+}
+.SocialLink:active{
+    transform: scale(105%);
+}
+.Socials{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1em;
+    transform: scale(140%);
+}
+.SocialsBg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 6px 3px #00000027;
+    border-radius: 10em;
+    height: 4em;
+    width: 18em;
+    overflow: hidden;
+    transition: 0.3s;
+}
+#MainButton{
+    width: 2.5em;
+    height: 2.5em;
+    margin-left: 3em;
+    object-fit: contain;
+    transition: 0.5s;
+}
+#LeftCurlyBracket{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#RightCurlyBracket{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) scale(-1);
+}
+.CurlyBracket{
+    margin-top: 25em;
+    width: 45em;
+}
+.CurlyBrackets{
+    position: relative;
+}
+@keyframes UpAndDownArrow {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(0.5em);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes Shake {
+    0% {
+        transform: rotateZ(var(--shake-degrees));
+    }
+
+    50% {
+        transform: rotateZ(calc(var(--shake-degrees) * -1));
+    }
+}
+
+@media (max-aspect-ratio: 1/1) {
+    .Introduction {
+        font-size: 8em;
+    }
+
+    .GameLink:not(:first-child) {
+        margin-left: 8em;
+    }
+
+    .GameContainer {
+        width: 25em;
+    }
+}
+@media (max-width: 1450px) {
+    #LeftCurlyBracket,
+    #RightCurlyBracket{
+       opacity: 0;
+    }
+}
+@media(min-aspect-ratio: 16/9)
+{
+    .Socials{
+        transform: scale(100%);
+    }
+    .SocialsBg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 5px 2px #00000027;
+        border-radius: 10em;
+        height: 4em;
+        width: 4em;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    #MainButton{
+        width: 2.5em;
+        height: 2.5em;
+        margin-left: 3em;
+        object-fit: contain;
+        transition: 0.5s;
+    }
+    .SocialsBg:hover{
+        width: 16em;
+    }
+    .SocialsBg:hover  #MainButton{
+        transform: rotate(360deg);
+    }
+    .SocialLink:hover{
+        transform: scale(105%);
+        box-shadow: 0px 0px 6px 3px #00000027;
+        border-radius: 10em;
+    }
+}

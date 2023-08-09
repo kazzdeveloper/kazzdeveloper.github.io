@@ -1,0 +1,75 @@
+.buttondel,
+.buttonac,
+.buttonequal,
+.buttonspecial,
+.buttonsymbols,
+.buttonnumpad{
+    width: 6em;
+    height: 4.5em;
+    margin: 0.2em;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    transition: 0.3s;
+    color: #ffffff;
+}
+.buttonspecial,
+.buttonnumpad{
+    background-color: #192BC2;
+}
+.buttondel{
+    background-color: #ffd98e;
+}
+.buttonac{
+    background-color: #ff8181;
+}
+.buttonsymbols{
+    background-color: #8ab4f8;
+}
+.buttonequal{
+    background-color: #91f88a;
+}
+.buttondel:hover,
+.buttonac:hover,
+.buttonequal:hover,
+.buttonspecial:hover,
+.buttonsymbols:hover,
+.buttonnumpad:hover{
+    transform: scale(102%);
+}
+.buttondel:hover{
+    box-shadow: 0px 0px 12px 1px #ffd98e;
+}
+.buttonac:hover{
+    box-shadow: 0px 0px 12px 1px #ff8181;
+}
+.buttonequal:hover{
+    box-shadow: 0px 0px 12px 1px #91f88a;
+}
+.buttonspecial:hover{
+    box-shadow: 0px 0px 12px 1px #192BC2;
+}
+.buttonsymbols:hover{
+    box-shadow: 0px 0px 12px 1px #8ab4f8;
+}
+.buttonnumpad:hover{
+    box-shadow: 0px 0px 12px 1px #192BC2;
+}
+.display{
+    border-radius: 0.5em;
+    width: 98.5%;
+    height: 3em;
+    margin-left: 0.2em;
+    margin-bottom: 0.2em;
+    font-size: 1em;
+    font-family: "Poppins", sans-serif;
+}
+.display{
+    border-radius: 0.5em;
+    width: 99%;
+    height: 2.5em;
+    border-color: #000000;
+    transition: 0.3s;
+    margin-top: 1em;
+}

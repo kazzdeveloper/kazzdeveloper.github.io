@@ -1,0 +1,126 @@
+<html>
+    <link rel="stylesheet" href="CSS/calculator.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/button.css">
+    <link rel="stylesheet" href="CSS/inputfield.css">
+    <link rel="stylesheet" href="CSS/systemsBg.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="icon" type="image/x-icon" href="Images/KazzDevLogo.png">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init('V8rWHKiChrO551JyZ');
+        })();
+    </script>
+    <title>Kazz | LittleSystems</title>
+    <body class="MainBody">
+        <div class="Container">
+            <section>
+                <div class="UrlShortener">
+                    <h1>
+                        Url shortener
+                    </h1>
+                    <div>
+                        Put the <b class="ColoredWords">url</b> that you wanna have <b class="ColoredWords">shorter</b> below.
+                    </div>
+                    <input type="text" name="" id="longurl" class="InputField"><br/>
+                    <button id="shorten" class="Button"><div class="ButtonText">Shorten</div> <img src="Images/Shorten.svg" class="ButtonIcon" alt=""></button><br/>
+                    <input type="text" name="" id="shorturl" class="InputField"><br/>
+                    <button id="copy" class="Button"><div class="ButtonText">Copy</div> <img src="Images/CopyIcon.svg" class="ButtonIcon" alt=""></button><br/>
+                </div>
+            </section>
+            <section>
+                <div class="calculator" id="calculator">
+                    <form>
+                        <h1>Calculator</h1>
+                        <input type="text" name="display" disabled class="display">
+                        <div class="button-row">
+                            <input type="button" value="AC" onclick="display.value =''" class="buttonac">
+                            <input type="button" value="Del" onclick="display.value =display.value.toString().slice (0,-1)" class="buttondel">
+                            <input type="button" value="." onclick="display.value +='.'" class="buttonsymbols">
+                            <input type="button" value="/" onclick="display.value +='/'" class="buttonsymbols">
+                        </div>
+                        <div class="button-row">
+                            <input type="button" value="7" onclick="display.value +='7'" class="buttonnumpad">
+                            <input type="button" value="8" onclick="display.value +='8'" class="buttonnumpad">
+                            <input type="button" value="9" onclick="display.value +='9'" class="buttonnumpad">
+                            <input type="button" value="x" onclick="display.value +='*'" class="buttonsymbols">
+                        </div>
+                        <div class="button-row">
+                            <input type="button" value="4" onclick="display.value +='4'" class="buttonnumpad">
+                            <input type="button" value="5" onclick="display.value +='5'" class="buttonnumpad">
+                            <input type="button" value="6" onclick="display.value +='6'" class="buttonnumpad">
+                            <input type="button" value="-" onclick="display.value +=''" class="buttonsymbols">
+                        </div>
+                        <div class="button-row">
+                            <input type="button" value="1" onclick="display.value +='1'" class="buttonnumpad">
+                            <input type="button" value="2" onclick="display.value +='2'" class="buttonnumpad">
+                            <input type="button" value="3" onclick="display.value +='3'" class="buttonnumpad">
+                            <input type="button" value="+" onclick="display.value +='+'" class="buttonsymbols">
+                        </div>
+                        <div class="button-row">
+                            <input type="button" value="00" onclick="display.value +='00'" class="buttonspecial">
+                            <input type="button" value="0" onclick="display.value += '0'" class="buttonspecial">
+                            <input type="button" value="=" onclick="display.value = eval(display.value)" class="buttonequal">
+                        </div>
+                    </form>
+                </div>
+            </section> 
+            <section>
+                <div class="qrcodegenerator">
+                    <h1>
+                        QrCode generator
+                    </h1>
+                    <div>
+                        Put the <b class="ColoredWords">url</b> that you wanna convert to <b class="ColoredWords">QrCode</b> below.
+                    </div>
+                    <input type="text" placeholder="URL or text" class="InputField" id="qrText"><br/>
+                    <div id="imgBox">
+                        <img src="" id="qrImage">
+                    </div>
+                    <button onclick="GenerateQR()"  class="Button"><div class="ButtonText">Generate</div> <img src="Images/QrCodeIcon.svg" class="ButtonIcon" alt=""></button>
+                </div>
+            </div>
+            </section>
+            
+            <section>
+                <div class="ContactMe">
+                    <h1>Contact Me</h1>
+                    <div>
+                        Send me an <b class="ColoredWords">email</b> if you have any <b class="ColoredWords">question's</b>.
+                    </div>
+                    <input type="text" id="fullName" placeholder="Name" class="InputField" required /><br/>
+                    <input type="email" id="email_id" placeholder="Email" class="InputField" required /><br/>
+                    <textarea id="message" placeholder="Message" class="InputFieldMessage" required></textarea><br/>
+                    <button onclick="SendMail()" class="Button"><div class="ButtonText">Send</div> <img src="Images/SendEmailIcon.svg" class="ButtonIcon" alt=""></button>
+                    
+                </div>
+            </section> 
+        </div>  
+        <div class="Socials">
+            <div class="SocialsBg">
+                <a href="./index.html" class="SocialLink"> <img src="Images/HomeIcon.svg" class="SocialImage" alt=""></a>
+                <a> <img src="Images/KazzLogoBackgroundRemovedBlue.png" id="MainButton"></a>
+                <a href="./littleProjects.html" class="SocialLink"> <img src="Images/SystemIcon.svg" class="SocialImage" alt=""></a>
+            </div>         
+        </div>  
+    </div>
+        <script src="JavaScript/urlShortener.js"></script>
+        <script src="JavaScript/copy.js"></script>
+        <script src="JavaScript/contact.js"></script>
+        <script src="JavaScript/qrCodeGenerator.js"></script>
+        <script src="JavaScript/uploadimage.js"></script>
+    </body>
+
+
+<div class="Kazz">
+    <a href="kazzdev.net"></a>
+</div>
+
+
+
+
+
+
+</html
+
