@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Akira';
+    src: url('Font/Lol/akira_expanded_demo-webfont.woff') format('woff');
+}
+@font-face {
+    font-family: 'Nexa';
+    src: url('Font/Nexa/nexa-heavy-webfont.woff') format('woff');
+}
+html, body {
+    height: 100%;
+    margin: 0;
+}
+body {
+    height: 100vh;
+    color: white;
+    background: rgb(28,40,172);
+    background: linear-gradient(180deg, rgba(28,40,172,1) 0%, rgba(39,79,255,1) 35%, rgba(46,23,189,1) 100%);
+}
+#Introduction {
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+}
+#IntroductionText{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10%;
+}
+#IntroductionLogo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#IntroductionLogo img{
+    filter: drop-shadow(1px 1px 10px #00000086);
+    transition: ease-in-out 0.2s;
+    max-width: 80%;
+}
+#IntroductionLogo img:hover{
+    transform: scale(105%) rotate(5deg);
+    filter: drop-shadow(1px 1px 10px #000000b0);
+}
+#Introduction h1 {
+    filter: drop-shadow(1px 1px 10px #00000086);
+    display: flex;
+    font-family: 'Akira', sans-serif;
+    font-size: 3.5em;
+    margin: 0;
+}
+#Introduction p {
+    filter: drop-shadow(1px 1px 10px #00000086);
+    font-family: 'Nexa', sans-serif;
+    font-size: 2em;
+}
+#age{
+    color: rgb(0, 33, 105);
+}
