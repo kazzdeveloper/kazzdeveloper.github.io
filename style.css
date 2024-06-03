@@ -9,10 +9,11 @@
 html, body {
     height: 100%;
     margin: 0;
+    cursor:none;
 }
 body {
     height: 100vh;
-    color: white;
+    color: rgb(255, 255, 255);
     background: rgb(28,40,172);
     background: linear-gradient(180deg, rgba(28,40,172,1) 0%, rgba(39,79,255,1) 35%, rgba(46,23,189,1) 100%);
 }
@@ -37,7 +38,7 @@ body {
 }
 #IntroductionLogo img{
     filter: drop-shadow(1px 1px 10px #00000086);
-    transition: ease-in-out 0.2s;
+    transition: ease-in 0.2s;
     max-width: 80%;
 }
 #IntroductionLogo img:hover{
@@ -58,4 +59,30 @@ body {
 }
 #age{
     color: rgb(0, 33, 105);
+}
+div#ball{
+    width: 1.5em;
+    height: 1.5em;
+    border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: rgba(4, 0, 37, 0.267);
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 0.8s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
 }
