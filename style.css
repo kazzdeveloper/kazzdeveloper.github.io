@@ -9,20 +9,20 @@
 html, body {
     height: 100%;
     margin: 0;
-    cursor:none;
+    cursor: none;
 }
 body {
     height: 100vh;
     color: rgb(255, 255, 255);
-    background: rgb(28,40,172);
-    background: linear-gradient(180deg, rgba(28,40,172,1) 0%, rgba(39,79,255,1) 35%, rgba(46,23,189,1) 100%);
+    background: rgb(28, 40, 172);
+    background: linear-gradient(180deg, rgba(28, 40, 172, 1) 0%, rgba(39, 79, 255, 1) 35%, rgba(46, 23, 189, 1) 100%);
 }
 #Introduction {
     width: 100vw;
     display: flex;
     height: 100vh;
 }
-#IntroductionText{
+#IntroductionText {
     width: 50%;
     display: flex;
     flex-direction: column;
@@ -30,18 +30,18 @@ body {
     align-items: flex-start;
     padding-left: 10%;
 }
-#IntroductionLogo{
+#IntroductionLogo {
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#IntroductionLogo img{
+#IntroductionLogo img {
     filter: drop-shadow(1px 1px 10px #00000086);
     transition: ease-in 0.2s;
     max-width: 80%;
 }
-#IntroductionLogo img:hover{
+#IntroductionLogo img:hover {
     transform: scale(105%) rotate(5deg);
     filter: drop-shadow(1px 1px 10px #000000b0);
 }
@@ -57,10 +57,7 @@ body {
     font-family: 'Nexa', sans-serif;
     font-size: 2em;
 }
-#age{
-    color: rgb(0, 33, 105);
-}
-div#ball{
+div#ball {
     width: 1.5em;
     height: 1.5em;
     border-radius: 50%;
@@ -74,15 +71,39 @@ div#ball{
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
-
-.hidden{
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 0.8s;
+#Text3D {
+    transition: ease-in-out 0.3s;
+    color: rgb(0, 33, 105);
 }
-.show{
+#Text3D:hover {
+    text-shadow: 0px 0px 0 rgb(-12, 21, 93), 1px 1px 0 rgb(-15, 18, 90), 2px 2px 0 rgb(-17, 16, 88), 3px 3px 0 rgb(-20, 13, 85), 4px 4px 0 rgb(-22, 11, 83), 5px 5px 4px rgba(0, 0, 0, 0.6), 5px 5px 1px rgba(0, 0, 0, 0.5), 0px 0px 4px rgba(0, 0, 0, .2);
+}
+#age, #birthday {
     opacity: 1;
-    filter: blur(0);
-    transform: translateX(0);
+    transition: opacity 0.3s ease-in-out;
 }
+
+#birthday {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+#age:hover {
+    opacity: 0;
+}
+
+#age:hover + #birthday {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear;
+}
+
+#birthday:hover {
+    opacity: 1;
+}
+
+
+
+
+
