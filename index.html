@@ -2,49 +2,43 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kazz Introduction</title>
+    <title>I just wanna say luv you <3 </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Images/KazzDevLogoIcon.png">
 </head>
 <body>
-    <div id="Introduction">
-        <div id="IntroductionText">
-            <h1 class="hidden">kazz</h1>
-            <p class="hidden">
-                I am <span class="hidden" id="age">15</span> years old.<br>
-                I do <span id="randomLetterWord"></span>
-            </p>
+    <section class="Page">
+        <div id="Introduction">
+            <div id="IntroductionText">
+                <h1 class="hidden">Tibe VD Brande</h1>
+                <p class="hidden">
+                    I am <span class="hidden" id="age">15</span> years old.<br>
+                    I do <span id="pasion"></span>
+                </p>
+            </div>
+            <div id="IntroductionRightSide" class="hidden">
+                <p class="hidden">I'm random ass dude know as kazz online <br><br> -Tibe VDB</p>
+            </div>
         </div>
-        <div id="IntroductionLogo" class="hidden">
-            <img src="Images/KazzLogoBackgroundRemoved.png" alt="Kazz Logo">
+    </section>
+    <section class="Page" id="programming">
+        <h1>programming</h1>
+        <div id="projects">
+            <li><a class="hidden" href="https://kazzdev.itch.io" target="_blank"><img id="project" src="Images/ItchKazzVersion.png" alt="ItchLogo"></a></li>
+            <li><a class="hidden" href="kazzdeveloper.github.io"><img id="project" src="Images/KazzLogoBackgroundRemoved.png" alt="ItchLogo"></a></li>
+            <li><a href=""><img id="project" src="Images/DiscordKazzVersion.png" alt="ItchLogo"></a></li>
         </div>
-    </div>
-    <div id="Introduction">
-        <div id="IntroductionText">
-            <h1 class="hidden">kazz</h1>
-            <p class="hidden">
-                I am <span class="hidden" id="randomLetterWord"></span> old.<br>
-                I do <span id="randomLetterWord"></span>
-            </p>
+    </section>
+    <section class="Page" id="modeling">
+        <h1>3D models</h1>
+        <div id="projects">
+            <li><img id="project" src="Images/Cassete.png" alt="Cassete"></li>
+            <li><img id="project" src="Images/TvTokyo.png" alt="Car"></li>
+            <li><img id="project" src="Images/GameBoy.png" alt="ItchLogo"></li>
         </div>
-        <div id="IntroductionLogo" class="hidden">
-            <img src="Images/KazzLogoBackgroundRemoved.png" alt="Kazz Logo">
-        </div>
-    </div>
-    <div id="ball"></div>
+    </section>
+    <div id="OuterCircleCursor"></div>
+    <div id="Ball"></div>
     <script src="app.js"></script>
-    <script src="scramble.js"></script>
-    <script>
-        const phrases = ['programming','3D modeling'];
-        const el = document.getElementById('randomLetterWord');
-        const fx = new TextScramble(el);
-        let counter = 0;
-        const next = () => {
-            fx.setText(phrases [counter]).then(() => { 
-            setTimeout(next, 3200);
-            });
-        counter = (counter + 1) % phrases.length;
-        };
-        next();
-    </script>
 </body>
 </html>
