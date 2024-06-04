@@ -53,6 +53,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    text-decoration: none;
 }
 #projects li a img{
     width: 80%;
@@ -66,6 +70,13 @@ body {
 #projects li:hover{
     transform: scale(105%);
     filter: drop-shadow(1px 1px 10px #ffffff21);
+}
+#projects li:hover #projectText{
+    opacity: 1;
+}
+#projectText{
+    opacity: 0;
+    transition: all 0.3s;
 }
 #projects li{
     transition: all 0.3s;
