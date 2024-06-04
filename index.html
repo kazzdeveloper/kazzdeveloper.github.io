@@ -11,7 +11,19 @@
             <h1 class="hidden">kazz</h1>
             <p class="hidden">
                 I am <span class="hidden" id="age">15</span> years old.<br>
-                I like <span id="randomLetterWord">coding</span> and <span id="Text3D">3D</span> modelling
+                I like <span id="randomLetterWord"></span>
+            </p>
+        </div>
+        <div id="IntroductionLogo" class="hidden">
+            <img src="Images/KazzLogoBackgroundRemoved.png" alt="Kazz Logo">
+        </div>
+    </div>
+    <div id="Introduction">
+        <div id="IntroductionText">
+            <h1 class="hidden">kazz</h1>
+            <p class="hidden">
+                I am <span class="hidden" id="age">15</span> years old.<br>
+                I like <span id="randomLetterWord"></span>
             </p>
         </div>
         <div id="IntroductionLogo" class="hidden">
@@ -20,5 +32,19 @@
     </div>
     <div id="ball"></div>
     <script src="app.js"></script>
+    <script src="scramble.js"></script>
+    <script>
+        const phrases = ['programming','3D modeling'];
+        const el = document.getElementById('randomLetterWord');
+        const fx = new TextScramble(el);
+        let counter = 0;
+        const next = () => {
+            fx.setText(phrases [counter]).then(() => { 
+            setTimeout(next, 3200);
+            });
+        counter = (counter + 1) % phrases.length;
+        };
+        next();
+    </script>
 </body>
 </html>

@@ -7,11 +7,11 @@
     src: url('Font/Nexa/nexa-heavy-webfont.woff') format('woff');
 }
 html, body {
-    height: 100%;
     margin: 0;
+    cursor: none;
 }
 body {
-    height: 100vh;
+    height: 100%;
     color: rgb(255, 255, 255);
     background: rgb(28, 40, 172);
     background: linear-gradient(180deg, rgba(28, 40, 172, 1) 0%, rgba(39, 79, 255, 1) 35%, rgba(46, 23, 189, 1) 100%);
@@ -78,5 +78,8 @@ div#ball {
     text-shadow: 0px 0px 0 rgb(-12, 21, 93), 1px 1px 0 rgb(-15, 18, 90), 2px 2px 0 rgb(-17, 16, 88), 3px 3px 0 rgb(-20, 13, 85), 4px 4px 0 rgb(-22, 11, 83), 5px 5px 4px rgba(0, 0, 0, 0.6), 5px 5px 1px rgba(0, 0, 0, 0.5), 0px 0px 4px rgba(0, 0, 0, .2);
 }
 #age{
+    color: rgb(0, 33, 105);
+}
+#randomLetterWord{
     color: rgb(0, 33, 105);
 }

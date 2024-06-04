@@ -67,10 +67,3 @@ ageText.onmouseout= function () {
     ageText.innerHTML = calculateAge(birthdate);
 }
 
-const word = document.getElementById("randomLetterWord");
-word.onmouseover = function(){
-    randomLetter();
-}
-function randomLetter(){
-    
-}
