@@ -42,43 +42,37 @@ body {
 #projects{
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    padding: -2em;
+    grid-template-columns: 20% 20% 20%;
+    grid-gap: 2em;
 }
-#projects li{
-    overflow: hidden;
-    width: 25em;
-    background-color: rgba(63, 63, 63, 0.205);
-    border-radius: 3px;
-    height: 40em;
-    margin: 3em;
-    list-style: none;
-    transition: all 0.3s;
+#projects li a{
+    background-color: rgb(26, 26, 26);
+    height: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+}
+#projects li a img{
+    width: 80%;
+}
+#project{
+    transition: 0.3s;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 #projects li:hover{
     transform: scale(105%);
     filter: drop-shadow(1px 1px 10px #ffffff21);
 }
-#projects li a{
-    height: 100%;
-    object-fit: contain;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#projects li{
+    transition: all 0.3s;
 }
-#project{
-    object-fit: contain;
-    width: 20em;
+li{
+    list-style: none;
 }
-#modeling #projects #project{
-    width: 25em;
-   }
 #IntroductionText {
     width: 50%;
     display: flex;
@@ -101,7 +95,9 @@ h1 {
     display: flex;
     font-family: 'Akira', sans-serif;
     font-size: 3.5em;
-    margin: 0;
+}
+.Page{
+    margin-bottom:1em ;
 }
 #Introduction p {
     filter: drop-shadow(1px 1px 10px #00000086);
@@ -155,3 +151,11 @@ div#Ball {
     filter: blur(0);
     opacity: 1;
 }
+@media screen and (max-width: 1000px) {
+    #projects {
+        grid-template-columns: 30% 30% 30%;
+    }
+    #projects li a{
+        height: 50%;
+    }
+  }
