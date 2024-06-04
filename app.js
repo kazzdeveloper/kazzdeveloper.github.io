@@ -57,3 +57,20 @@ const observer = new IntersectionObserver((entries) => {
 });
 const hiddenElements = document.querySelectorAll('.hidden')
 hiddenElements.forEach((el) => observer.observe(el));
+
+const ageText = document.getElementById("age");
+
+ageText.onmouseover = function () {
+    ageText.innerHTML = "2009/03/21"
+}
+ageText.onmouseout= function () {
+    ageText.innerHTML = calculateAge(birthdate);
+}
+
+const word = document.getElementById("randomLetterWord");
+word.onmouseover = function(){
+    randomLetter();
+}
+function randomLetter(){
+    
+}
