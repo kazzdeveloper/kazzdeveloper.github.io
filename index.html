@@ -7,39 +7,62 @@
     <link rel="icon" href="Images/KazzDevLogoIcon.png">
 </head>
 <body>
+    <div class="preload-images"></div>       
+    <section id="IntroPage">
+        <p id="IntroText"></p>
+    </section>
     <section class="Page">
         <div id="Introduction">
             <div id="IntroductionText">
-                <h1 class="hidden">Tibe VD Brande</h1>
-                <p class="hidden">
-                    I am <span class="hidden" id="age">15</span><br>
+                <h1>Tibe VD Brande</h1>
+                <p >
+                    I am <span  id="age">15</span><br>
                     I do <span id="pasion"></span>
                 </p>
             </div>
-            <div id="IntroductionRightSide" class="hidden">
-                <p class="hidden">I'm random ass dude known as <span style="color:rgb(122, 122, 122)">kazz</span><br><br> -Tibe VDB</p>
+            <div id="IntroductionRightSide">
+                <p   >I'm random ass dude known as <span style="color:rgb(122, 122, 122)">kazz</span><br><br> -Tibe VDB</p>
             </div>
         </div>
     </section>
     <section class="Page" id="programming">
         <h1>programming</h1>
-        <div id="projects">
-            <li><a class="hidden" href="https://kazzdev.itch.io" target="_blank"><img id="project" src="Images/ItchKazzVersion.png" alt="ItchLogo"><p id="projectText">Here you can find all my sh*tty games on Itch.io.</p></a></li>
-            <li><a class="hidden" href="kazzdeveloper.github.io"><img id="project" src="Images/KazzLogoBackgroundRemoved.png" alt="KazzLogo"><p id="projectText">This is my portfolio where you can find projects that ive made.</p></a></li>
-            <li><a href=""><img id="project" src="Images/DiscordKazzVersion.png" alt="Discord"><p id="projectText">This is my own Discord bot that i made for my discord server. <br>(This bot is not public)</p></a></li>
+        <div id="programmingProjects">
+            <li><a href="https://kazzdev.itch.io" target="_blank"><img id="project" src="Images/ItchKazzVersion.png" alt="ItchLogo"><p id="projectText">Here you can find all my sh*tty games on Itch.io.</p></a></li>
+            <li><a href="kazzdeveloper.github.io"><img id="project" src="Images/KazzLogoBackgroundRemoved.png" alt="KazzLogo"><p id="projectText">This is my portfolio where you can find projects that ive made.</p></a></li>
+            <li><a href=""><img id="project" src="Images/DiscordKazzVersion.png" alt="Discord"><p id="projectText">This is my own Discord bot that's not finished but still working on it <br>br(This is not gonna be public)</p></a></li>
         </div>
     </section>
     <section class="Page" id="modeling">
         <h1>3D models</h1>
-        <div id="projects">
-            <li><img id="project" src="Images/Cassete.png" alt="Cassete"></li>
-            <li><img id="project" src="Images/Boombox.png" alt="Boombox"></li>
-            <li><img id="project" src="Images/GameBoy.png" alt="GameBoy"></li>
-            <li><img id="project" src="Images/TvTokyo.png" alt="TvTokyo"></li>
+        <h1>Cassete</h1>
+        <div id="modelingProjects">
+            <img class="modelingProject" id="Cassete" src="Images/Cassete.png" alt="Cassete" data-color="blue">
+            <img class="modelingProject" id="Cassete" src="Images/CasseteRed.png" alt="Cassete" data-color="red">
+            <img class="modelingProject" id="Cassete" src="Images/CasseteGreen.png" alt="Cassete" data-color="green">
+            <img class="modelingProject" id="Cassete" src="Images/CasseteYellow.png" alt="Cassete" data-color="yellow">
         </div>
-    </section>
+        <h1>GameBoy</h1>
+        <div id="modelingProjects">
+            <img class="modelingProject" id="Cassete" src="Images/GameBoyBlue.png" alt="Cassete" data-color="blue">
+            <img class="modelingProject" id="Cassete" src="Images/GameBoyRed.png" alt="Cassete" data-color="red">
+            <img class="modelingProject" id="Cassete" src="Images/GameBoyGreen.png" alt="Cassete" data-color="green">
+            <img class="modelingProject" id="Cassete" src="Images/GameBoy.png" alt="Cassete" data-color="yellow">
+        </div>
+        <h1>Boombox</h1>
+        <div id="modelingProjects">
+            <img class="modelingProject" id="Cassete" src="Images/Boombox.png" alt="Cassete" data-color="pink">
+            <img class="modelingProject" id="Cassete" src="Images/Boombox444.png" alt="Cassete"data-color="beige">
+            <img class="modelingProject" id="Cassete" src="Images/BoomboxLetItHappen.png" alt="Cassete" data-color="purple">
+            <img class="modelingProject" id="Cassete" src="Images/BoomboxRunaway.png" alt="Cassete" data-color="pink">
+        </div>
+        <h1>Other</h1>
+        <div id="modelingProjects">
+            <li><img class="modelingProject" id="Cassete" src="Images/TvTokyo.png" alt="Cassete" data-color="black"></li>
+        </div>
+    </section>   
     <div id="OuterCircleCursor"></div>
-    <div id="Ball"></div>
+    <div id="Ball"></div>                   
     <script src="app.js"></script>
 </body>
 </html>

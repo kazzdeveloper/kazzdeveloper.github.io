@@ -49,20 +49,6 @@ document.addEventListener("mousemove", function(event){
   mouseX = event.pageX;
   mouseY = event.pageY;
 })
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("show");
-        }
-        else{
-            entry.target.classList.remove("show");
-        }
-    });
-});
-const hiddenElements = document.querySelectorAll('.hidden')
-hiddenElements.forEach((el) => observer.observe(el));
-
 const ageText = document.getElementById("age");
 
 function loadExternalScript(url, callback) {
@@ -103,4 +89,36 @@ loadExternalScript('scramble.js', function() {
     nextPassion();
 });
 
+loadExternalScript('scramble.js', function() {
+    const phrases = ["","Hello.", "Welcome to my portfolio.",""];
+    const introText = document.getElementById('IntroText');
+    const introTextScrambled = new TextScramble(introText);
+    let counter = 0;
+    const nextAge = () => {
+        introTextScrambled.setText(phrases[counter]).then(() => {
+            setTimeout(() => {
+                counter = (counter + 1) % phrases.length;
+                nextAge();
+            }, 2500);
+        });
+    };
+    nextAge();
+});
+document.addEventListener('DOMContentLoaded', function () {
+    const modelingSection = document.getElementById('modeling');
+    modelingSection.scrollIntoView({ behavior: 'smooth' });
 
+    setTimeout(function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 80000);
+});
+
+var elements = document.querySelectorAll('.modelingProject');
+
+elements.forEach(function(element) {
+    var dataColor = element.getAttribute('data-color');
+
+    if (dataColor) {
+        element.style.filter = 'drop-shadow(1px 1px 4px ' + dataColor + ')';
+    }
+});
