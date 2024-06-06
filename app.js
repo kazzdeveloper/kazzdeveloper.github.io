@@ -88,31 +88,6 @@ loadExternalScript('scramble.js', function() {
     };
     nextPassion();
 });
-
-loadExternalScript('scramble.js', function() {
-    const phrases = ["","Hello.", "Welcome to my portfolio.",""];
-    const introText = document.getElementById('IntroText');
-    const introTextScrambled = new TextScramble(introText);
-    let counter = 0;
-    const nextAge = () => {
-        introTextScrambled.setText(phrases[counter]).then(() => {
-            setTimeout(() => {
-                counter = (counter + 1) % phrases.length;
-                nextAge();
-            }, 2500);
-        });
-    };
-    nextAge();
-});
-document.addEventListener('DOMContentLoaded', function () {
-    const modelingSection = document.getElementById('modeling');
-    modelingSection.scrollIntoView({ behavior: 'smooth' });
-
-    setTimeout(function () {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 80000);
-});
-
 var elements = document.querySelectorAll('.modelingProject');
 
 elements.forEach(function(element) {
