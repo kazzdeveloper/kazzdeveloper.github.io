@@ -29,76 +29,12 @@ body:after{
 ::-webkit-scrollbar {
     width: 0%;
 }
-.Page{
-    height: 100vh;
-    width: 100vw;
-}
 #Introduction {
     width: 100vw;
     display: flex;
     height: 100vh;
 }
-.Page{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.Page h1{
-    margin-top: 1.5em;
-    filter: drop-shadow(1px 1px 10px #00000086);
-}
-.modelingProject{
-    width: 20%;
-    filter: drop-shadow(1px 1px 10px attr(data-color));
-}
-#programmingProjects, #modelingProjects{
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    display:flex;
-    flex: row;
-    grid-gap: 2em;
-}
-#modelingProjects{
-    margin-bottom: 5em;
-}
-#programmingProjects li a{
-    background-color: rgb(26, 26, 26);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    color: white;
-    text-decoration: none;
-}
-.modelingProject{
-    filter: drop-shadow(1px 1px 10px #00000086);
-}
-#programmingProjects li a img{
-    width: 80%;
-}
-#project{
-    transition: 0.3s;
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-}
-#programmingProjects li:hover{
-    transform: scale(105%);
-    filter: drop-shadow(1px 1px 10px #ffffff21);
-}
-#programmingProjects li:hover #projectText{
-    opacity: 1;
-}
-#projectText{
-    opacity: 0;
-    transition: all 0.3s;
-}
-#programmingProjects li{
-    transition: all 0.3s;
-}
+
 li{
     list-style: none;
 }
@@ -111,7 +47,7 @@ li{
     padding-left: 10%;
 }
 #IntroductionRightSide {
-    width: 48%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -119,19 +55,74 @@ li{
 #IntroductionRightSide p{
     filter: drop-shadow(1px 1px 10px #00000086);
 }
+#Introduction p {
+    filter: drop-shadow(1px 1px 10px #00000086);
+    font-family: 'Nexa', sans-serif;
+    font-size: 2em;
+}
 h1 {
     filter: drop-shadow(1px 1px 10px #00000086);
     display: flex;
     font-family: 'Akira', sans-serif;
     font-size: 3.5em;
+    justify-content: center;
 }
-.Page{
-    margin-bottom:1em ;
+.models {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
-#Introduction p {
-    filter: drop-shadow(1px 1px 10px #00000086);
-    font-family: 'Nexa', sans-serif;
+.modelingInfoText{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 3em;
+    width: 45%;
+    height: 50%;
+}
+.modelingInfoText p{
     font-size: 2em;
+}
+.modelingProjects {
+    width: 50vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    justify-items: center;
+    align-items: center;
+}
+#modelTitel{
+    margin-bottom: 2em;
+}
+#modelingProject {
+    width: 45%;
+    margin: 3em;
+}
+.lineCut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10em;
+    margin-top: 10em;
+}
+#line{
+    background-color: rgba(122, 122, 122, 0.459);
+    height: 0.1em;
+    width: 40%;
+    margin-right: 2em;
+    margin-left: 2em;
+}
+#lineImg{
+    width: 2.4em;
+    color: rgba(122, 122, 122, 0.459);
+}
+#Text3D{
+    color: rgba(122, 122, 122);
+    transition: ease-in-out 0.3s;
+}
+#Text3D:hover {
+    text-shadow:0px 0px 0 rgb(111,111,111),1px 1px 0 rgb(99,99,99),2px 2px 0 rgb(88,88,88),3px 3px 0 rgb(76,76,76),4px 4px 0 rgb(65,65,65),5px 5px 0 rgb(53,53,53), 6px 6px 0 rgb(42,42,42),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);
 }
 div#OuterCircleCursor {
     width: 3em;
@@ -158,17 +149,13 @@ div#Ball {
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
-#Text3D {
-    transition: ease-in-out 0.3s;
-    color: rgb(0, 33, 105);
-}
-#Text3D:hover {
-    text-shadow: 0px 0px 0 rgb(-12, 21, 93), 1px 1px 0 rgb(-15, 18, 90), 2px 2px 0 rgb(-17, 16, 88), 3px 3px 0 rgb(-20, 13, 85), 4px 4px 0 rgb(-22, 11, 83), 5px 5px 4px rgba(0, 0, 0, 0.6), 5px 5px 1px rgba(0, 0, 0, 0.5), 0px 0px 4px rgba(0, 0, 0, .2);
-}
 #age{
     color: rgb(122, 122, 122);
 }
 #pasion{
+    color: rgb(122, 122, 122);
+}
+#highlightedWord{
     color: rgb(122, 122, 122);
 }
 .hidden{
@@ -196,14 +183,10 @@ div#Ball {
     background-image: url(Images/CasseteGreen.png);
     background-image: url(Images/CasseteRed.png);
     background-image: url(Images/CasseteYellow.png);
-    background-image: url();
-
 }
 @media screen and (max-width: 1000px) ,(orientation:portrait) {
-    #programmingProjects {
-        grid-template-columns: 30% 30% 30%;
-    }
-    #programmingProjects li a{
-        height: 50%;
+    #modelingProject {
+        width: 70%;
+        margin: 1.5em;
     }
 }
