@@ -47,7 +47,7 @@ li{
     padding-left: 10%;
 }
 #IntroductionRightSide {
-    width: 50%;
+    width: 48%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,34 +67,27 @@ h1 {
     font-size: 3.5em;
     justify-content: center;
 }
-.models {
+.pasionPage {
     width: 100vw;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
-.modelingInfoText{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: 3em;
-    width: 45%;
-    height: 50%;
+.pasionInfo{
+    width: 50%;
+    margin-left: 4em;
 }
-.modelingInfoText p{
-    font-size: 2em;
+.pasionInfo p{
+   font-size: 2em;
 }
-.modelingProjects {
+.pasionProjects {
     width: 50vw;
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
     justify-items: center;
     align-items: center;
 }
-#modelTitel{
-    margin-bottom: 2em;
-}
-#modelingProject {
+#pasionProject {
     width: 55%;
     margin: 1em;
 }

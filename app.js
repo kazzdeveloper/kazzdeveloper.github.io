@@ -33,7 +33,7 @@ animateOuterCircle();
 const ball = document.querySelector("div#Ball");
 let ballX = 0;
 let ballY = 0;
-let ballSpeed = 0.8;
+let ballSpeed = 1;
 function animateBall(){
   let ballDistX = mouseX - ballX;
   let ballDistY = mouseY - ballY;
