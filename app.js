@@ -14,36 +14,41 @@ const birthdate = '2009-03-21';
 document.getElementById('age').textContent = calculateAge(birthdate);
 
 const outerCircle = document.querySelector("div#OuterCircleCursor");
-let mouseX = 0;
-let mouseY = 0;
-let outerCircleX = 0;
-let outerCircleY = 0;
+const ball = document.querySelector("div#Ball");
+let mouseX = 0, mouseY = 0;
+let outerCircleX = 0, outerCircleY = 0;
 let outerCircleSpeed = 0.12;
+let ballX = 0, ballY = 0;
+let ballSpeed = 1;
+
 function animateOuterCircle(){
   let outerCircledDistX = mouseX - outerCircleX;
   let outerCircledDistY = mouseY - outerCircleY;
-  outerCircleX = outerCircleX + (outerCircledDistX * outerCircleSpeed);
-  outerCircleY = outerCircleY + (outerCircledDistY * outerCircleSpeed);
+  outerCircleX += (outerCircledDistX * outerCircleSpeed);
+  outerCircleY += (outerCircledDistY * outerCircleSpeed);
   outerCircle.style.left = outerCircleX + "px";
   outerCircle.style.top = outerCircleY + "px";
   requestAnimationFrame(animateOuterCircle);
 }
-animateOuterCircle();
 
-const ball = document.querySelector("div#Ball");
-let ballX = 0;
-let ballY = 0;
-let ballSpeed = 1;
 function animateBall(){
   let ballDistX = mouseX - ballX;
   let ballDistY = mouseY - ballY;
-  ballX = ballX + (ballDistX * ballSpeed);
-  ballY = ballY + (ballDistY * ballSpeed);
+  ballX += (ballDistX * ballSpeed);
+  ballY += (ballDistY * ballSpeed);
   ball.style.left = ballX + "px";
   ball.style.top = ballY + "px";
   requestAnimationFrame(animateBall);
 }
+
+document.addEventListener("mousemove", function(event){
+  mouseX = event.pageX;
+  mouseY = event.pageY;
+});
+
+animateOuterCircle();
 animateBall();
+
 
 document.addEventListener("mousemove", function(event){
   mouseX = event.pageX;
