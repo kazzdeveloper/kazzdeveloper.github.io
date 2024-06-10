@@ -73,26 +73,19 @@ li{
     list-style: none;
 }
 #IntroductionText {
-    width: 50%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding-left: 10%;
-}
-#IntroductionRightSide {
-    width: 48%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-}
-#IntroductionRightSide p{
-    filter: drop-shadow(1px 1px 10px #00000086);
 }
 #Introduction p {
     filter: drop-shadow(1px 1px 10px #00000086);
     font-family: 'Nexa', sans-serif;
     font-size: 2em;
+}
+#arrow{
+    animation: moveUpDown 2s infinite;
 }
 h1 {
     filter: drop-shadow(1px 1px 10px #00000086);
@@ -109,7 +102,7 @@ h1 {
 }
 .pasionInfo{
     width: 50%;
-    margin-left: 4em;
+    margin-left: 6em;
 }
 .pasionInfo p{
    font-size: 2em;
@@ -121,10 +114,13 @@ h1 {
     justify-items: center;
     align-items: center;
 }
+#passionProjectsProgramming{
+    grid-template-columns: repeat(1, 1fr); 
+}
 .pasionProjects img{
-    width: 10em;
+    width: 13em;
     margin: 1em;
-    filter: drop-shadow(1px 1px 10px #00000086);
+    filter: drop-shadow(1px 1px 10px #000000af);
 }
 .pasionProjects a{
     background-color: rgba(143, 143, 143, 0.1);
@@ -134,9 +130,8 @@ h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin: 1em;
     transition: all 0.3s;
-    filter: drop-shadow(1px 1px 10px #00000086);
+    filter: drop-shadow(1px 1px 10px #000000af);
 }
 .pasionProjects a p{
     color: white;
@@ -223,4 +218,12 @@ div#Ball {
     background-image: url(Images/CasseteGreen.png);
     background-image: url(Images/CasseteRed.png);
     background-image: url(Images/CasseteYellow.png);
+}
+@keyframes moveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
 }

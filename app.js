@@ -66,7 +66,7 @@ function loadExternalScript(url, callback) {
 
 loadExternalScript('scramble.js', function() {
     const currentAge = calculateAge(birthdate);
-    const ageAndBirthday = [currentAge.toString(), "2009/03/21"];
+    const ageAndBirthday = ["2009/03/21", currentAge.toString()];
     const ageText = document.getElementById('age');
     const ageScrambled = new TextScramble(ageText);
     let counterAge = 0;
