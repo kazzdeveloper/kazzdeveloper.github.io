@@ -94,6 +94,14 @@ h1 {
     font-size: 3.5em;
     justify-content: center;
 }
+#Model3d{
+    background-color: rgba(0, 0, 0, 0);
+    margin-bottom: 5em;
+}
+#Model3d img{
+    width: 13em;
+    filter: drop-shadow(1px 1px 10px #000000af);
+}
 .pasionPage {
     width: 100vw;
     display: flex;
@@ -102,7 +110,7 @@ h1 {
 }
 .pasionInfo{
     width: 50%;
-    margin-left: 6em;
+    margin-left: 4em;
 }
 .pasionInfo p{
    font-size: 2em;
@@ -131,6 +139,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     transition: all 0.3s;
+    text-decoration: none;
     filter: drop-shadow(1px 1px 10px #000000af);
 }
 .pasionProjects a p{
@@ -261,5 +270,13 @@ div#Ball {
     }
     50% {
         transform: translateY(-10px);
+    }
+}
+@media (pointer:none), (pointer:coarse){
+    div#OuterCircleCursor{
+        opacity: 0;
+    }
+    div#Ball{
+        opacity: 0;
     }
 }

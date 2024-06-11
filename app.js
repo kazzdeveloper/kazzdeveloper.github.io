@@ -112,7 +112,7 @@ email.onclick = function() {
 email.addEventListener("copy", function(event) {
   event.preventDefault();
   if (event.clipboardData) {
-    event.clipboardData.setData("text/plain", "tibevdb@gmail.com");
+    event.clipboardData.setData("text/plain", "tibevdbrande@gmail.com");
     console.log(event.clipboardData.getData("text"))
     email.textContent = "COPIED"
     setTimeout(function() {
