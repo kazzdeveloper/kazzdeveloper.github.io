@@ -102,3 +102,21 @@ elements.forEach(function(element) {
         element.style.filter = 'drop-shadow(1px 1px 4px ' + dataColor + ')';
     }
 });
+
+const email = document.getElementById("email");
+
+email.onclick = function() {
+  document.execCommand("copy");
+}
+
+email.addEventListener("copy", function(event) {
+  event.preventDefault();
+  if (event.clipboardData) {
+    event.clipboardData.setData("text/plain", "tibevdb@gmail.com");
+    console.log(event.clipboardData.getData("text"))
+    email.textContent = "COPIED"
+    setTimeout(function() {
+        email.textContent = "EMAIL"
+      }, 1000);
+  }
+});
