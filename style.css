@@ -9,6 +9,7 @@
 html, body {
     margin: 0;
     cursor: none;
+    height: 100%;
 }
 html{
     scroll-behavior: smooth;
@@ -50,13 +51,23 @@ nav:hover{
 body {
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
+    font-weight:500;
     height: 100%;
     color: rgb(255, 255, 255);
     animation-name: EnableScroll;
     animation-duration: 12s;
     animation-iteration-count: 1;
     background-color: rgb(22, 22, 22);
+}
+#background{
+    z-index: -99999;
+    width: 100vw;
+    height: 100vh;
     background-image: url("Images/TopoMap.png");
+    background-size: contain;
+    background-size: 35vw;
+    position: fixed;
+    top: 0;
 }
 body:after{
     display:none;
@@ -69,7 +80,6 @@ body:after{
     display: flex;
     height: 100vh;
 }
-
 li{
     list-style: none;
 }
@@ -141,7 +151,7 @@ h1 {
     flex-direction: column;
     transition: all 0.3s;
     text-decoration: none;
-    filter: drop-shadow(1px 1px 10px #000000af);
+    filter: drop-shadow(1px 1px 10px #000000d3);
 }
 .pasionProjects a p{
     color: white;
@@ -198,7 +208,7 @@ h1 {
     flex-direction: column;
 }
 .socialsAndContact a{
-    height: 25%;
+    height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -279,5 +289,8 @@ div#Ball {
     }
     div#Ball{
         opacity: 0;
+    }
+    .background{
+        background-size: 60vw;
     }
 }
