@@ -17,9 +17,9 @@
 <body>
     <div id="background"></div>
     <div class="codeTabs">
-      <button onclick="ActivateTab('htmlText')">HTML</button>
-      <button onclick="ActivateTab('cssText')">CSS</button>
-      <button onclick="ActivateTab('jsText')">JAVASCRIPT</button>
+      <button id="htmlButton" onclick="ActivateTab('htmlText')">HTML</button>
+      <button id="cssButton" onclick="ActivateTab('cssText')">CSS</button>
+      <button id="jsButton" onclick="ActivateTab('jsText')">JAVASCRIPT</button>
     </div>
     <div class="TextAreaContainer">
         <div class="codeArea">
@@ -73,8 +73,14 @@
         document.getElementById('cssText').parentElement.style.display = 'none';
         document.getElementById('jsText').parentElement.style.display = 'none';
         document.getElementById(name).parentElement.style.display = 'flex';
-      }
 
+        document.getElementById('htmlButton').style.backgroundColor = '#2c2d30a2';
+        document.getElementById('cssButton').style.backgroundColor = '#2c2d30a2';
+        document.getElementById('jsButton').style.backgroundColor = '#2c2d30a2';
+        let nameButton = name.substring(0, name.length-4);
+        document.getElementById(nameButton + "Button").style.backgroundColor = '#2c2d30';
+      }
+      //background-color: #2c2d30de
       ActivateTab('htmlText');
     </script>
 </body>
