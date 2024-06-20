@@ -9,9 +9,10 @@
 
 
 .cm-s-dracula.CodeMirror, .cm-s-dracula .CodeMirror-gutters {
-  background-color: #282a36a2 !important;
+  background-color: #2c2d30a2 !important;
   color: #f8f8f2 !important;
   border: none;
+  height: 50vh;
 }
 .cm-s-dracula .CodeMirror-gutters { color: #282a36; }
 .cm-s-dracula .CodeMirror-cursor { border-left: solid thin #f8f8f0; }

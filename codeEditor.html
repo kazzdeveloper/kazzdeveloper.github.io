@@ -16,17 +16,19 @@
 </head>
 <body>
     <div id="background"></div>
+    <div class="codeTabs">
+      <button onclick="ActivateTab('htmlText')">HTML</button>
+      <button onclick="ActivateTab('cssText')">CSS</button>
+      <button onclick="ActivateTab('jsText')">JAVASCRIPT</button>
+    </div>
     <div class="TextAreaContainer">
         <div class="codeArea">
-            <p class="codeName">HTML</p>
             <textarea onkeyup="run()" name="Html" id="htmlText"></textarea>
         </div>
         <div class="codeArea">
-            <p class="codeName">CSS</p>
             <textarea name="CSS" id="cssText"></textarea>
         </div>
         <div class="codeArea">
-            <p class="codeName">Javascript</p>
             <textarea name="Javascript" id="jsText"></textarea>
         </div>
     </div>
@@ -60,11 +62,20 @@
           
           const resultFrame = document.getElementById('result');
           resultFrame.srcdoc = combinedCode;
-        }, 3000);
+        }, 0);
       }
       htmlEditor.on('change', run);
       cssEditor.on('change', run);
       jsEditor.on('change', run);
+
+      function ActivateTab(name) {
+        document.getElementById('htmlText').parentElement.style.display = 'none';
+        document.getElementById('cssText').parentElement.style.display = 'none';
+        document.getElementById('jsText').parentElement.style.display = 'none';
+        document.getElementById(name).parentElement.style.display = 'flex';
+      }
+
+      ActivateTab('htmlText');
     </script>
 </body>
 </html>
