@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="codeEditorStyle.css">
+
+    <script src="codemirror-5.65.16/lib/codemirror.js"></script>
+    <link href="codemirror-5.65.16/lib/codemirror.css" rel="stylesheet"/>
+    <script src="codemirror-5.65.16/mode/xml/xml.js"></script>
+    <script src="codemirror-5.65.16/mode/css/css.js"></script>
+    <script src="codemirror-5.65.16/mode/javascript/javascript.js"></script>
+    <script src="codemirror-5.65.16/addon/edit/closetag.js"></script>
+    <link href="codemirror-5.65.16/theme/dracula.css" rel="stylesheet"/>
+</head>
+<body>
+    <div id="background"></div>
+    <div class="TextAreaContainer">
+        <div class="codeArea">
+            <p class="codeName">HTML</p>
+            <textarea onkeyup="run()" name="Html" id="htmlText"></textarea>
+        </div>
+        <div class="codeArea">
+            <p class="codeName">CSS</p>
+            <textarea name="CSS" id="cssText"></textarea>
+        </div>
+        <div class="codeArea">
+            <p class="codeName">Javascript</p>
+            <textarea name="Javascript" id="jsText"></textarea>
+        </div>
+    </div>
+    <iframe id="result"></iframe>
+    <script>
+      var htmlEditor = CodeMirror.fromTextArea(document.getElementById("htmlText"), {
+        mode: 'text/html',
+        autoCloseTags: true,
+        theme: 'dracula',
+      });
+
+      var cssEditor = CodeMirror.fromTextArea(document.getElementById("cssText"), {
+        mode: 'text/css',
+        theme: 'dracula',
+        autoCloseTags: true,
+      });
+
+      var jsEditor = CodeMirror.fromTextArea(document.getElementById("jsText"), {
+        mode: 'javascript',
+        theme: 'dracula',
+        autoCloseTags: true,
+      });
+      function run() {
+        const htmlCode = htmlEditor.getValue();
+        const cssCode = `<style>${cssEditor.getValue()}</style>`;
+        const jsCode = `<script>${jsEditor.getValue()}<\/script>`;
+        const combinedCode = `${htmlCode}${cssCode}${jsCode}`;
+        
+        const resultFrame = document.getElementById('result');
+        resultFrame.srcdoc = combinedCode;
+      }
+
+      // Attach the run function to CodeMirror's change event
+      htmlEditor.on('change', run);
+      cssEditor.on('change', run);
+      jsEditor.on('change', run);
+    </script>
+</body>
+</html>
