@@ -20,7 +20,7 @@ body {
 #background{
     z-index: -99999;
     width: 100vw;
-    height: 100vh;
+    height: 50vh;
     background-image: url("Images/TopoMap.png");
     background-size: contain;
     background-size: 35vw;
@@ -74,5 +74,4 @@ textarea:focus{
     height: 100vh;
     width: 100%;
     border: none;
-    background-color: white;
 }

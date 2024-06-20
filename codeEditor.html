@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Code Editor</title>
     <link rel="stylesheet" href="codeEditorStyle.css">
-
+    <link rel="icon" href="Images/TibeVDBLogoNoBg.png"> 
     <script src="codemirror-5.65.16/lib/codemirror.js"></script>
     <link href="codemirror-5.65.16/lib/codemirror.css" rel="stylesheet"/>
     <script src="codemirror-5.65.16/mode/xml/xml.js"></script>
@@ -49,17 +49,19 @@
         theme: 'dracula',
         autoCloseTags: true,
       });
+      let debounceTimer;
       function run() {
-        const htmlCode = htmlEditor.getValue();
-        const cssCode = `<style>${cssEditor.getValue()}</style>`;
-        const jsCode = `<script>${jsEditor.getValue()}<\/script>`;
-        const combinedCode = `${htmlCode}${cssCode}${jsCode}`;
-        
-        const resultFrame = document.getElementById('result');
-        resultFrame.srcdoc = combinedCode;
+        clearTimeout(debounceTimer);
+        debounceTimer = setTimeout(() => {
+          const htmlCode = htmlEditor.getValue();
+          const cssCode = `<style>${cssEditor.getValue()}</style>`;
+          const jsCode = `<script>${jsEditor.getValue()}<\/script>`;
+          const combinedCode = `${htmlCode}${cssCode}${jsCode}`;
+          
+          const resultFrame = document.getElementById('result');
+          resultFrame.srcdoc = combinedCode;
+        }, 3000);
       }
-
-      // Attach the run function to CodeMirror's change event
       htmlEditor.on('change', run);
       cssEditor.on('change', run);
       jsEditor.on('change', run);
