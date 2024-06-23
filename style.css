@@ -1,298 +1,181 @@
 @font-face {
-    font-family: 'Akira';
-    src: url('Font/Lol/akira_expanded_demo-webfont.woff') format('woff');
+    font-family: 'Nexa'; /*a name to be used later*/
+    src: url('Font/Jetbrains/webfonts/JetBrainsMono-ExtraBold.woff2'); /*URL to font*/
 }
-@font-face {
-    font-family: 'Nexa';
-    src: url('Font/Nexa/nexa-heavy-webfont.woff') format('woff');
-}
-html, body {
+body,html{
     margin: 0;
-    cursor: none;
-    height: 100%;
-    scroll-behavior: smooth;
-}
-nav{    
-    width: 7em;
-    display: grid;
-    grid-template-columns: repeat(1, 1fr); 
-    justify-items: center;
-    align-items: center;
-    height: 2.5em;
-    overflow: hidden;
-    position: fixed;
-    border-radius: 0.3em;
-    margin: 0.5em; 
-    transition: all 0.3s;
-}
-nav:hover{
-    height: 11.5em;
-    background: rgba(28, 28, 28);
-    filter: drop-shadow(1px 1px 10px #00000086);   
-}
-#navIcon{
-    width: 2.5em;
-    margin: 0.5em;
-}
-#linkPage{
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    transition: all 0.3s;
-    width: 100%;
-    padding-left: 1.5em;
-    background-color: rgb(26, 26, 26);
-}
-#linkPage:hover{
-    filter: drop-shadow(1px 1px 10px #00000086);
-    transform: scale(108%);
-}
-body {
+    background-color: yellow;
     overflow-x: hidden;
-    font-family: "Montserrat", sans-serif;
-    font-weight:500;
-    height: 100%;
-    color: rgb(255, 255, 255);
-    animation-name: EnableScroll;
-    animation-duration: 12s;
-    animation-iteration-count: 1;
-    background-color: rgb(22, 22, 22);
+    font-family: Nexa;
 }
-a{
-    cursor: none;
-}
-#background{
-    z-index: -99999;
-    width: 100vw;
-    height: 100vh;
-    background-image: url("Images/TopoMap.png");
-    background-size: contain;
-    background-size: 35vw;
+nav{
     position: fixed;
-    top: 0;
-    filter: blur(2.2px);
-}
-body:after{
-    display:none;
-}
-::-webkit-scrollbar {
-    width: 0%;
-}
-#Introduction {
-    width: 100vw;
     display: flex;
-    height: 100vh;
-}
-li{
-    list-style: none;
-}
-#IntroductionText {
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-}
-#Introduction p {
-    filter: drop-shadow(1px 1px 10px #00000086);
-    font-family: 'Nexa', sans-serif;
-    font-size: 2em;
-}
-#arrow{
-    animation: moveUpDown 2s infinite;
-}
-h1 {
-    filter: drop-shadow(1px 1px 10px #00000086);
-    display: flex;
-    font-family: 'Akira', sans-serif;
-    font-size: 3.5em;
-    justify-content: center;
-}
-#Model3d{
-    background-color: rgba(0, 0, 0, 0);
-    margin-bottom: 5em;
-}
-#Model3d img{
-    width: 13em;
-    filter: drop-shadow(1px 1px 10px #000000af);
-}
-.pasionPage {
-    width: 100vw;
-    display: flex;
     flex-direction: row;
-    align-items: center;
+    margin: 2em;
 }
-.pasionInfo{
-    width: 50%;
-    margin-left: 4em;
-}
-.pasionInfo p{
-   font-size: 2em;
-}
-.pasionProjects {
-    width: 50vw;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    justify-items: center;
-    align-items: center;
-}
-#passionProjectsProgramming{
-    grid-template-columns: repeat(1, 1fr); 
-}
-.pasionProjects img{
-    width: 13em;
-    margin: 1em;
-    filter: drop-shadow(1px 1px 10px #000000af);
-}
-.pasionProjects a{
-    background-color: rgba(36, 36, 36, 0.61);
-    border-radius: 0.3em;
-    height: 20em;
+.NavLinks{
+    overflow: hidden;
+    width: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
+    gap: 3.2em;
+    height: 2em;
+    transition: all 0.5s; 
+    background-color: yellow;
+    box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);  
+}
+.NavLinks a{
+    color: black;
+    text-decoration: none;
+    font-family: Nexa;
+    user-select: none;
+    white-space: nowrap;
     transition: all 0.3s;
-    text-decoration: none;
-    filter: drop-shadow(1px 1px 10px #000000d3);
 }
-.pasionProjects a p{
-    color: white;
-    text-decoration: none;
-    color: rgba(122, 122, 122);
-    filter: drop-shadow(1px 1px 10px #00000086);
+.NavLinks a:hover{
+    transform: scale(110%);
 }
-.pasionProjects a:hover{
-    transform: scale(103%);
-}
-.lineCut{
+#BurgerIcon{
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: row;
-    margin-bottom: 10em;
-    margin-top: 10em;
+    justify-content: center ;
+    flex-direction: column;
+    gap: 0.5em;
 }
-#line{
-    background-color: rgba(122, 122, 122, 0.459);
-    height: 0.1em;
-    width: 40%;
-    margin-right: 2em;
-    margin-left: 2em;
+/*Navbar*/
+#BurgerLine{
+    transition: all 0.7s;
+    width: 2em;
+    height: 0.2em;
+    border-radius: 1em;
+    background-color: black;
+    border: none;
 }
-#lineImg{
-    width: 2.4em;
-    color: rgba(122, 122, 122, 0.459);
+.NavLinks:hover,
+#BurgerIcon:hover + .NavLinks {
+    width: 40em;
 }
-#Text3D{
-    color: rgba(122, 122, 122);
-    transition: ease-in-out 0.3s;
+
+#BurgerIcon:hover + .NavLinks {
+    transform: scale(100%);
 }
-#Text3D:hover {
-    text-shadow:0px 0px 0 rgb(111,111,111),1px 1px 0 rgb(99,99,99),2px 2px 0 rgb(88,88,88),3px 3px 0 rgb(76,76,76),4px 4px 0 rgb(65,65,65),5px 5px 0 rgb(53,53,53), 6px 6px 0 rgb(42,42,42),7px 7px 6px rgba(0,0,0,0.6),7px 7px 1px rgba(0,0,0,0.5),0px 0px 6px rgba(0,0,0,.2);
+nav:hover #BurgerLine{
+    transform: rotate(382deg);
 }
-#passionProjectsFutureProjects{
+nav:hover #BurgerLine:nth-child(2){
+    transform: rotate(-382deg);
+}
+/*Intro/Home*/
+.Intro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     width: 100vw;
-    grid-template-columns: repeat(3, 1fr); 
+    height: 100vh;
+    user-select: none;
 }
-#passionProjectsFutureProjects a{
-    width: 20em;
+.TextContainer{
+    display: inline-block;
 }
-#passionProjectsFutureProjects a p{
+#MainText{
+    font-size: 3em;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
     text-align: center;
 }
-.socialsAndContact{
-    margin-top: 9em;
+#SmallText{
+    font-size: 0.7em;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+}
+/*About*/
+.About{
     width: 100vw;
-    height: 50vh;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    user-select: none;
+}
+.AboutText{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.90em;
+    margin-left: 3em;
+}
+.AboutPictures{
+    height: 100vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AboutPicture{
+    background-image: url('Images/LittleMe.png');
+    background-position: center;
+    background-size:cover;
+    height: 25em;
+    width: 25em;
+    border-radius: 50%;
+    border: solid;
+    border-color: black;
+    border-width: 0.5em;
+}
+.MyParents{
+    padding-top: 5em;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    user-select: none;
+}
+.Parent{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-.socialsAndContact a{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    filter: drop-shadow(1px 1px 10px #00000086);
-    font-size: 3em;
-    text-decoration: none;
-    color: white;
-    background-color: rgba(67, 67, 67, 0);
-    transition: all 0.3s;
-    padding-left: 1em;
+.ParentDescription{
+    height: 90%;
+    width: 80%;
+    text-align: justify;
 }
-.socialsAndContact a:hover{
-    background-color: rgb(217, 217, 217);
-    color: rgb(31, 31, 31);
-}
-div#OuterCircleCursor {
-    width: 3em;
-    height: 3em;
+/*Cursor*/
+.ball{
+    width: 5em;
+    height: 5em;
+    transition: width 0.3s, height 0.3s;
+    background-color: yellow;
     border-radius: 50%;
-    border-style: solid;
-    border-width: 2px;
-    border-color: rgba(94, 94, 94, 0.411);
-    background-color: rgba(0, 0, 0, 0);
+    pointer-events: none;
     position: absolute;
     top: 0;
     left: 0;
     transform: translate(-50%, -50%);
-    pointer-events: none;
+    mix-blend-mode: exclusion;
 }
-div#Ball {
-    width: 0.3em;
-    height: 0.3em;
-    border-radius: 50%;
-    background-color: rgb(141, 141, 141);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-#age{
-    color: rgb(122, 122, 122);
-}
-#pasion{
-    color: rgb(122, 122, 122);
-}
-#highlightedWord{
-    color: rgb(122, 122, 122);
-}
-.preload-images{
-    width: 0px;
-    height: 0px;
-    display: inline;
-    background-image: url(Images/Boombox.png);
-    background-image: url(Images/Boombox444.png);
-    background-image: url(Images/BoomboxLetItHappen.png);
-    background-image: url(Images/BoomboxRunaway.png);
-    background-image: url(Images/GameBoy.png);
-    background-image: url(Images/GameBoyBlue.png);
-    background-image: url(Images/GameBoyGreen.png);
-    background-image: url(Images/GameBoyRed.png);
-    background-image: url(Images/Cassete.png);
-    background-image: url(Images/CasseteGreen.png);
-    background-image: url(Images/CasseteRed.png);
-    background-image: url(Images/CasseteYellow.png);
-}
-@keyframes moveUpDown {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
+@keyframes cursor {
+    50%{
+        border-color: transparent;
     }
 }
-@media (pointer:none), (pointer:coarse), (min-width:1000px){
-    div#OuterCircleCursor{
-        opacity: 0;
-    }
-    div#Ball{
-        opacity: 0;
-    }
-    .background{
-        background-size: 60vw;
+@keyframes typing {
+    from{
+        width: 0;
     }
 }
