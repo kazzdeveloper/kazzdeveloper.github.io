@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       picture.addEventListener('mouseenter', () => {
           ball.style.width = '0em';
           ball.style.height = '0em';
-          ball.style.zIndex = '100';
+          ball.style.zIndex = '-1';
       });
 
       picture.addEventListener('mouseleave', () => {

@@ -4,9 +4,11 @@
 }
 body,html{
     margin: 0;
+    padding: 0;
     background-color: yellow;
     overflow-x: hidden;
     font-family: Nexa;
+    color: rgb(0, 7, 27);
 }
 nav{
     position: fixed;
@@ -28,7 +30,7 @@ nav{
     box-shadow: 0px 0px 25px 2px rgba(0,0,0,0.75);  
 }
 .NavLinks a{
-    color: black;
+    color: rgb(0, 7, 27);
     text-decoration: none;
     font-family: Nexa;
     user-select: none;
@@ -38,7 +40,7 @@ nav{
 .NavLinks a:hover{
     transform: scale(110%);
 }
-#BurgerIcon{
+#BurgerIcon{ 
     display: flex;
     align-items: center;
     justify-content: center ;
@@ -51,12 +53,13 @@ nav{
     width: 2em;
     height: 0.2em;
     border-radius: 1em;
-    background-color: black;
+    background-color: rgb(0, 7, 27);
     border: none;
 }
 .NavLinks:hover,
 #BurgerIcon:hover + .NavLinks {
-    width: 40em;
+    padding-left: 1em;
+    width: 30em;
 }
 
 #BurgerIcon:hover + .NavLinks {
@@ -89,7 +92,6 @@ nav:hover #BurgerLine:nth-child(2){
     text-align: center;
 }
 #SmallText{
-    font-size: 0.7em;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -106,13 +108,16 @@ nav:hover #BurgerLine:nth-child(2){
     user-select: none;
 }
 .AboutText{
-    height: 100vh;
+    height: 50%;
     width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.90em;
+    font-size: 1.5em;
     margin-left: 3em;
+    border: solid;
+    border-radius: 10px;
+    border-color: rgb(0, 7, 27);
 }
 .AboutPictures{
     height: 100vh;
@@ -129,7 +134,7 @@ nav:hover #BurgerLine:nth-child(2){
     width: 25em;
     border-radius: 50%;
     border: solid;
-    border-color: black;
+    border-color: rgb(0, 7, 27);
     border-width: 0.5em;
 }
 .MyParents{
@@ -155,12 +160,20 @@ nav:hover #BurgerLine:nth-child(2){
     width: 80%;
     text-align: justify;
 }
+.AboutPicture{
+    filter: drop-shadow(0px 0px 18px #000000);
+    transition: all 0.5s;
+}
+.AboutPicture:hover{
+    filter: drop-shadow(0px 0px 15px #000000);
+    transform: scale(103%);
+}
 /*Cursor*/
 .ball{
     width: 5em;
     height: 5em;
     transition: width 0.3s, height 0.3s;
-    background-color: yellow;
+    background-color: rgb(255, 255, 23);
     border-radius: 50%;
     pointer-events: none;
     position: absolute;
