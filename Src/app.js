@@ -71,3 +71,8 @@ var age_dt = new Date(month_diff);
 var year = age_dt.getUTCFullYear();
 var age = Math.abs(year - 1970);
 document.getElementById("age").innerHTML = age;
+
+function DarkMode() {
+  var element = document.body;
+  element.classList.toggle("dark-mode");
+}
